@@ -16,12 +16,12 @@
         @foreach($users as $user)
             <tr>
                 <td>{{ $user->fname }}</td>
-            <td>{{ $user->lname }}</td>
-            <td>{{ $user->email }}</td>
-            <td>{{ $user->age }}</td>
-            <td>{{ $user->gender }}</td>
-            <td>{{ $user->contact }}</td>
-            <td>{{ $user->status }}</td>
+                <td>{{ $user->lname }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->age }}</td>
+                <td>{{ $user->gender }}</td>
+                <td>{{ $user->contact }}</td>
+                <td>{{ $user->status }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

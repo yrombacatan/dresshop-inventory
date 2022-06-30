@@ -10,7 +10,11 @@
         <div class="col-sm-4">
             <div class="card">
                 <div class="card-body">
-                    <img src="{{ isset($company->logo) ? asset('image/company/'.$company->logo) : '' }}" alt="Company Logo">
+                    @if (isset($company->logo))
+                        <img src="{{ asset('image/company/'.$company->logo) }}" alt="Company Logo">
+                    @else
+                        <span>No image yet</span>
+                    @endif
                 </div>
             </div>
         </div>
